@@ -13,7 +13,7 @@ args  m z
 				local ccFlags cc_* //Select all
 				
 				//Not sure if this will work in STATA...
-				while `counter' < 7 //If counter >=7, we can stop looping and include bene in the sub-pop {
+				while `counter' < 7 { //If counter >=7, we can stop looping and include bene in the sub-pop 
 					foreach x of local ccFlags{
 						disp `x'
 						if `x' == 1
