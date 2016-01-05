@@ -1,6 +1,6 @@
 //While loop using a counter in stata
-//Note: stata is weird about this; it works best to declare the counter as a local macro and then overwrite the value to increment
-        //it during each iteration.
+/*Note: stata is weird about this; it works best to declare the counter as a local macro and then overwrite the value to increment
+        it during each iteration. */
         
 
 cap program drop selectSubPopulation
