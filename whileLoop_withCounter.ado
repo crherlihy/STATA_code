@@ -21,7 +21,7 @@ if "`z'" == "atLeast7cc"{
 	*Check to make sure all vars are added to global macro
 	disp "$ccFlags"
 	
-				
+	*This part doesn't work yet			
 	//If counter >=7, we can stop looping and include bene in the sub-pop 
 	while `counter' < 7 { 
 		foreach x of local ccFlags{
