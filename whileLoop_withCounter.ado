@@ -10,7 +10,17 @@ args  m z
 *PATIENTS WITH AT LEAST 7 CHRONIC CONDITIONS SUB-POPULATION 
 if "`z'" == "atLeast7cc"{
 	local counter 0
-	local ccFlags cc_* //Select all
+	
+	*Need to initailize it with an empty string; otherwise, won't be able to append later 
+	global ccFlags ""
+	
+	foreach var of varlist cc_*{
+		global ccFlags "$ccFlags `var'"
+	}
+	
+	*Check to make sure all vars are added to global macro
+	disp "$ccFlags"
+	
 				
 	//If counter >=7, we can stop looping and include bene in the sub-pop 
 	while `counter' < 7 { 
