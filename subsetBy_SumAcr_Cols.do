@@ -1,7 +1,4 @@
 //Sum across a subset of rows, and subset the original dataset based on rows where this sum is > set # (here, 7) 
-/*Note: stata is weird about this; it works best to declare the counter as a local macro and then overwrite the value to increment
-        it during each iteration. */
-        
 
 cap program drop selectSubPopulation
 program define selectSubPopulation
