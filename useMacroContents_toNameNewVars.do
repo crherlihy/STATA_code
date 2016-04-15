@@ -13,6 +13,8 @@ foreach pair of global interact_post_hbpci{
 					disp marg_Coeff_`pair'
 					gen margSE_`pair' = aMargins[2, `counter']
 					gen marg_pVal_`pair' = aMargins[4,`counter']
-					gen margCoeff_SE_`pair' = string(`temp'[1,`counter'], "%9.2fc")+ cond(`temp'[4,`counter'] < 0.01, "**", cond(`temp'[4,`counter']<0.05,"*", cond(`temp'[4,`counter']<0.1, "+", ""))) + " (" + string(`temp'[2,`counter'], "%9.2fc")+")"
+					gen margCoeff_SE_`pair' = string(`temp'[1,`counter'], "%9.2fc")+ cond(`temp'[4,`counter'] < 0.01,
+						"**", cond(`temp'[4,`counter']<0.05,"*", cond(`temp'[4,`counter']<0.1, "+", ""))) 
+						+ " (" + string(`temp'[2,`counter'], "%9.2fc")+")"
 					global counter = `counter' + 1
 				}
