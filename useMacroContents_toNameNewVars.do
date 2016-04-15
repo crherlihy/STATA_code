@@ -5,6 +5,8 @@
 
 global interact_post_hbpci "00 01 10 11"
 
+global counter = 1
+
 foreach pair of global interact_post_hbpci{
 					disp "goes here"
 					gen margCoeff_`pair' = aMargins[1, `counter']
