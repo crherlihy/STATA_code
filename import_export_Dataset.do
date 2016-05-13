@@ -8,4 +8,4 @@ save saveas
 
 gen csvname = "insert_csv_name.csv"
 
-outsheet [vars to export] using csvname, comma 
+outsheet [vars to export] using csvname, comma | export excel using csvname
